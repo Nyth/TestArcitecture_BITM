@@ -15,10 +15,10 @@ public class BaseClass {
        opera_launch();
        edge_launch();
        firefox_launch();
-       open_testProject();
+       //open_URL();
        //chrome_close();
        //firefox_close();
-       chrome_quit();
+        chrome_quit();
       firefox_quit();
       //opera_close();
       opera_quit();
@@ -29,23 +29,24 @@ public class BaseClass {
     public static void chrome_launch(){
    System.setProperty("webdriver.chrome.driver","./src/main/resources/Drivers/chromedriver.exe");
    driver=new ChromeDriver();
-        driver.get("https://google.com");
+  // driver.manage().window().maximize();
+      //  driver.get("https://google.com");
     }
     public static void opera_launch(){
         System.setProperty("webdriver.opera.driver","./src/main/resources/Drivers/operadriver.exe");
         driver=new OperaDriver();
-        driver.get("https://google.com");
+       // driver.get("https://google.com");
     }
     public static void edge_launch(){
         System.setProperty("webdriver.edge.driver","./src/main/resources/Drivers/msedgedriver.exe");
         driver=new EdgeDriver();
-        driver.get("https://google.com");
+       // driver.get("https://google.com");
     }
 
       public static void firefox_launch(){
         System.setProperty("webdriver.gecko.driver","./src/main/resources/Drivers/geckodriver.exe");
         driver=new FirefoxDriver();
-          driver.get("https://google.com");
+         // driver.get("https://google.com");
     }
     public static void opera_close(){
         driver.quit();
@@ -78,8 +79,8 @@ public class BaseClass {
         driver.quit();
 
     }
-    public static void open_testProject()
+    public static void open_URL(String URL)
     {
-       driver.get("https://google.com");
+       driver.get(URL);
     }
 }
